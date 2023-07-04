@@ -14,21 +14,22 @@ const styles = StyleSheet.create({
   logoView: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 5 * vh, 
-    marginBottom: 3 * vh,
+
+    height: 40 * vw,
+    width: 100 * vw,
   },
 
   logoStyle: {
     resizeMode: 'contain',
-    height: 40 * vw,
-    width: 70 * vw,
+    height: 15 * vh,
+    width: 35 * vw,
   },
 
   fieldContainer: {
     backgroundColor: theme.whiteBackground,
     height: 100 * vh,
     width: 100 * vw,
-   },
+  },
 
   miniContainer: {
     justifyContent: 'center',

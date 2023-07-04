@@ -14,21 +14,24 @@ const styles = StyleSheet.create({
   logoView: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 5 * vh,
-    marginBottom: 3 * vh,
-    backgroundColor: theme.black
+
+    backgroundColor: theme.black,
+    height: 40 * vw,
+    width: 100 * vw,
   },
 
   logoStyle: {
     resizeMode: 'contain',
-    height: 40 * vw,
-    width: 70 * vw,
+    height: 10 * vh,
+    width: 35 * vw,
   },
 
   fieldContainer: {
     backgroundColor: theme.whiteBackground,
     height: 100 * vh,
     width: 100 * vw,
+    borderTopRightRadius: vh * 4,
+    borderTopLeftRadius: vh * 4,
   },
 
   miniContainer: {
@@ -93,11 +96,6 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.SFR,
   },
 
-  submitButtonStyle: {
-    width: 40 * vw,
-    marginTop: 4 * vh,
-  },
-
   titleTextStyle: {
     fontSize: 1.8 * vh,
     fontFamily: Fonts.SFD,
@@ -117,10 +115,9 @@ const styles = StyleSheet.create({
   signupTabView: {
     marginLeft: 8 * vw,
   },
-
-  submitButtonStyle: {
-    width: 70 * vw,
-    marginTop: 5 * vh,
+  btnContainer: {
+    height: vh * 15,
+    justifyContent: 'center',
   },
 
   signinTabTextStyle: {

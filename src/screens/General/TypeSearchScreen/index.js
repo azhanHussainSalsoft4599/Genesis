@@ -48,8 +48,8 @@ const TypeSearchScreen = props => {
           <TextInput
             value={searchedItem}
             onChangeText={text => setSearchedItem(text)}
-            placeholder="Search"
-            placeholderTextColor={theme.primary}
+            placeholder="Search volume"
+            placeholderTextColor={theme.grayColor} 
             onSubmitEditing={onHandleSearchItem}
             style={styles.textInputStyle}
           />

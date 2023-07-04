@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5 * vw,
     justifyContent: 'space-between',
     marginTop: 2 * vh,
-    height: vh * 7,
+    height: vh * 6.5,
   },
 
   checkoutButton: {

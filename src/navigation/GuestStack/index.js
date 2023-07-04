@@ -128,6 +128,7 @@ const DrawerNavigator = props => {
                   textStyle={styles.noTextStyle}
                   title={'Cancel'}
                   onPress={() => setIsVisible(false)}
+                  tranparent
                 />
               </View>
             </View>

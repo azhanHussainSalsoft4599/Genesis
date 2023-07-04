@@ -6,6 +6,7 @@ import theme from '../../../utils/theme';
 const styles = StyleSheet.create({
   scroll: {
     flex: 1,
+    backgroundColor: theme.whiteBackground,
   },
   content: {
     alignItems: 'center',
@@ -50,8 +51,9 @@ const styles = StyleSheet.create({
 
   clothingStoreTextStyle: {
     color: theme.black,
-    fontSize: 3 * vh,
+    fontSize: 2 * vh,
     fontFamily: Fonts.KB,
+    width: vw * 40,
   },
 
   headerContainer: {
@@ -66,6 +68,7 @@ const styles = StyleSheet.create({
     height: vh * 25,
     justifyContent: 'flex-end',
     paddingBottom: vh,
+    backgroundColor: theme.whiteBackground,
   },
   sliderView: {
     justifyContent: 'center',
@@ -114,7 +117,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: 85 * vw,
     justifyContent: 'space-between',
-    marginBottom: vh * 2
+    marginBottom: vh * 2,
   },
 
   categoriesTextStyle: {
@@ -131,11 +134,14 @@ const styles = StyleSheet.create({
   viewAllTextButtonView: {
     justifyContent: 'center',
     alignItems: 'center',
+    width: vw * 17,
+    height: vh * 4,
+    borderRadius: vh * 0.5,
   },
 
   viewAllTextButton: {
-    color: theme.defaultInactiveBorderColor,
-    fontSize: 1.8 * vh,
+    color: theme.whiteBackground,
+    fontSize: 1.6 * vh,
   },
 
   productImageStyle: {
@@ -193,7 +199,7 @@ const styles = StyleSheet.create({
   },
 
   cartCategoryTextStyle2: {
-    color: theme.primary,
+    color: theme.black,
     fontSize: 1.4 * vh,
     marginTop: 0.5 * vh,
     fontWeight: 'bold',

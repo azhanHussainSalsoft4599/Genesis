@@ -584,7 +584,6 @@ const ProductDetailsScreen = props => {
     );
   };
 
-
   const renderCounter = () => {
     return (
       <View style={styles.amountValueView}>
@@ -610,53 +609,44 @@ const ProductDetailsScreen = props => {
   const renderTabs = () => {
     return (
       <View style={styles.mainTabsView}>
-        <TouchableOpacity
-          onPress={handleTabs}
-          style={[
-            styles.detailsTabView,
-            {
-              borderWidth: !defaultTab ? 0.1 * vw : null,
-              borderColor: defaultTab
-                ? theme.defaultInactiveBorderColor
-                : theme.primary,
-            },
-          ]}>
-          <TextWrapper
-            style={[
-              styles.detailsTextStyle,
-              {
-                color: defaultTab
-                  ? theme.defaultInactiveBorderColor
-                  : theme.primary,
-              },
-            ]}>
-            Details
-          </TextWrapper>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          onPress={handleTabs}
-          style={[
-            styles.reviewsTabView,
-            {
-              borderWidth: defaultTab ? 0.1 * vw : null,
-              borderColor: !defaultTab
-                ? theme.defaultInactiveBorderColor
-                : theme.primary,
-            },
-          ]}>
-          <TextWrapper
-            style={[
-              styles.reviewsTabTextStyle,
-              {
-                color: !defaultTab
-                  ? theme.defaultInactiveBorderColor
-                  : theme.primary,
-              },
-            ]}>
-            Reviews
-          </TextWrapper>
-        </TouchableOpacity>
+        <LinearGradient
+          start={{x: 0.2, y: 0.4}}
+          end={{x: 0.6, y: 0.5}}
+          colors={defaultTab ? ['#FFFF', '#FFFF'] : ['#3CBEA0', '#1ECEE6']}
+          style={styles.detailsTabView}>
+          <TouchableOpacity onPress={handleTabs}>
+            <TextWrapper
+              style={[
+                styles.detailsTextStyle,
+                {
+                  color: defaultTab
+                    ? theme.defaultInactiveBorderColor
+                    : theme.whiteBackground,
+                },
+              ]}>
+              Details
+            </TextWrapper>
+          </TouchableOpacity>
+        </LinearGradient>
+        <LinearGradient
+          start={{x: 0.2, y: 0.4}}
+          end={{x: 0.6, y: 0.5}}
+          colors={defaultTab ? ['#3CBEA0', '#1ECEE6'] : ['#FFFF', '#FFFF']}
+          style={styles.detailsTabView}>
+          <TouchableOpacity onPress={handleTabs}>
+            <TextWrapper
+              style={[
+                styles.reviewsTabTextStyle,
+                {
+                  color: !defaultTab
+                    ? theme.defaultInactiveBorderColor
+                    : theme.whiteBackground,
+                },
+              ]}>
+              Reviews
+            </TextWrapper>
+          </TouchableOpacity>
+        </LinearGradient>
       </View>
     );
   };
@@ -713,7 +703,6 @@ const ProductDetailsScreen = props => {
       {renderSearchHeader()}
       <View
         style={{
-       
           backgroundColor: theme.whiteBackground,
           flex: 1,
         }}>

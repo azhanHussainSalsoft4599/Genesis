@@ -51,7 +51,7 @@ const SignupScreen = props => {
   const renderLogo = () => {
     return (
       <View style={styles.logoView}>
-        <Image source={generalImages.logo} style={styles.logoStyle} />
+        <Image source={authIcons.logo} style={styles.logoStyle} />
       </View>
     );
   };
@@ -124,14 +124,15 @@ const SignupScreen = props => {
               }}
             />
           </View>
-
-          <SubmitButton
-            // onPress={() => props.navigation.navigate('TabNavigator')}
-            onPress={() => handleSignUp()}
-            style={styles.submitButtonStyle}
-            titleTextStyle={styles.titleTextStyle}
-            title="Sign up"
-          />
+          <View style={styles.btnContainer}>
+            <SubmitButton
+              // onPress={() => props.navigation.navigate('TabNavigator')}
+              onPress={() => handleSignUp()}
+              style={styles.submitButtonStyle}
+              titleTextStyle={styles.titleTextStyle}
+              title="Sign up"
+            />
+          </View>
         </View>
 
         {renderSocialButtons()}

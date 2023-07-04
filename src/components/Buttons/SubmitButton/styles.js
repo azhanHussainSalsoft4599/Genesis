@@ -5,18 +5,15 @@ import {vw, vh} from '../../../units/index';
 
 export default style = StyleSheet.create({
   touchableButtonStyle: {
-    width: 90 * vw,
-    backgroundColor: theme.primary,
-    // borderRadius: 8 * vw,
-    height: 7 * vh,
+    width: 60 * vw,
+    height: 6 * vh,
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    borderRadius: 8 * vw,
+    borderRadius: vh,
   },
 
   titleTextStyle: {
-    // fontFamily: Fonts.PM,
     color: theme.whiteBackground,
     fontSize: 2 * vh,
   },

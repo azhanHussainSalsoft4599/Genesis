@@ -38,6 +38,7 @@ export const authIcons = {
   email: require('./authIcons/email.png'),
   password: require('./authIcons/password.png'),
   message: require('./icons/message.png'),
+  logo: require('./authIcons/logo.png'),
 };
 
 export const icons = {

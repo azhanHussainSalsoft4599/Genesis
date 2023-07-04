@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
-import { Fonts } from '../../assets/fonts';
-import { vh, vw } from '../../units';
+import {Fonts} from '../../assets/fonts';
+import {vh, vw} from '../../units';
 import theme from '../../utils/theme';
 
 const styles = StyleSheet.create({
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     height: 100 * vh,
     width: 100 * vw,
     position: 'absolute',
-    backgroundColor: theme.primary,
+    backgroundColor: '#0000',
     opacity: 0.7,
   },
   alertMainView: {
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     borderRadius: 6 * vw,
     height: 45 * vh,
   },
-  
+
   crossIconView: {
     justifyContent: 'center',
     alignItems: 'flex-end',
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     height: 14 * vh,
     width: 14 * vw,
   },
-  
+
   customAlertHeadingTextStyle: {
     fontFamily: Fonts.ECB,
     fontSize: 2.5 * vh,
@@ -107,7 +107,11 @@ const styles = StyleSheet.create({
     width: 35 * vw,
     height: 7 * vh,
     marginTop: 2 * vh,
-    backgroundColor: theme.black,
+    backgroundColor: 'transparent',
+    borderWidth: 1,
+  },
+  noTextStyle: {
+    color: theme.black,
   },
 
   textStyle: {
@@ -117,7 +121,7 @@ const styles = StyleSheet.create({
   yesTextStyle: {
     fontSize: 2.2 * vh,
     fontFamily: Fonts.SFR,
-    color: theme.primary,
+    color: theme.whiteBackground,
   },
 
   choiceButtonView: {

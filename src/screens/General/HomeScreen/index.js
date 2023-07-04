@@ -31,6 +31,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import MainContainer from '../../../components/Containers/MainContainer';
 import {Fonts} from '../../../assets/fonts';
 import {showToast} from '../../../redux/Api/HelperFunction';
+import SplashScreen from 'react-native-splash-screen';
 
 const HomeScreen = props => {
   const user = useSelector(state => state.authReducer?.user);
@@ -55,17 +56,12 @@ const HomeScreen = props => {
                 }>
                 <Image style={styles.drawerIconStyle} source={icons.drawer} />
               </TouchableOpacity>
-              <TextWrapper
-                style={{
-                  fontFamily: Fonts.SFR,
-                  fontSize: vh * 2,
-                }}>
-                pure organics-RX
-              </TextWrapper>
 
               <View style={styles.headerContainer}>
-                <TextWrapper style={styles.clothingStoreTextStyle}>
-                  Collections..!
+                <TextWrapper
+                  style={styles.clothingStoreTextStyle}
+                  numberOfLines={2}>
+                  Enjoy The True Beat New Dance Song
                 </TextWrapper>
 
                 <View style={styles.buttonsView}>
@@ -116,6 +112,7 @@ const HomeScreen = props => {
     if (loggedIn) {
       profileFunc(user);
     }
+    SplashScreen.hide();
   }, []);
 
   const handleAddToCart = item => {
@@ -163,12 +160,18 @@ const HomeScreen = props => {
             Categories
           </TextWrapper>
         </View>
-
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('CatgoriesStack')}
+        <LinearGradient
+          start={{x: 0.2, y: 0.4}}
+          end={{x: 0.6, y: 0.5}}
+          colors={['#3CBEA0', '#1ECEE6']}
+          // colors={['#D6D6D6', '#000000', '#D6D6D6']}
           style={styles.viewAllTextButtonView}>
-          <TextWrapper style={styles.viewAllTextButton}>View All</TextWrapper>
-        </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('CatgoriesStack')}
+            style={styles.viewAllTextButtonView}>
+            <TextWrapper style={styles.viewAllTextButton}>View All</TextWrapper>
+          </TouchableOpacity>
+        </LinearGradient>
       </View>
     );
   };
@@ -241,15 +244,22 @@ const HomeScreen = props => {
       <View style={styles.rowForArivalCategories}>
         <View style={styles.categoriesTextView}>
           <TextWrapper style={styles.categoriesTextStyle}>
-            New Arrivals
+            Trending Products
           </TextWrapper>
         </View>
-
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate('ProductsScreen')}
+        <LinearGradient
+          start={{x: 0.2, y: 0.4}}
+          end={{x: 0.6, y: 0.5}}
+          colors={['#3CBEA0', '#1ECEE6']}
+          // colors={['#D6D6D6', '#000000', '#D6D6D6']}
+          // colors={['#D6D6D6', '#000000', '#D6D6D6']}
           style={styles.viewAllTextButtonView}>
-          <TextWrapper style={styles.viewAllTextButton}>View All</TextWrapper>
-        </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate('ProductsScreen')}
+            style={styles.viewAllTextButtonView}>
+            <TextWrapper style={styles.viewAllTextButton}>View All</TextWrapper>
+          </TouchableOpacity>
+        </LinearGradient>
       </View>
     );
   };
@@ -378,7 +388,7 @@ const HomeScreen = props => {
         <View style={{marginTop: vh * 1.3, width: vw * 42}}>
           <View style={styles.cartView}>
             <TextWrapper style={[styles.cartCategoryTextStyle2]}>
-              $ {item?.name}
+              {item?.name}
             </TextWrapper>
 
             <TouchableOpacity

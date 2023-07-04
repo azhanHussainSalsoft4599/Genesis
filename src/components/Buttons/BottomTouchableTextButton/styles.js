@@ -21,13 +21,13 @@ export default StyleSheet.create({
   },
 
   textAccountStyle: {
-    color: theme.primary,
+    color: theme.black,
     fontSize: 1.8 * vh,
     fontFamily: Fonts.SFR,
   },
 
   backToTextStyle: {
-    color: theme.primary,
+    color: theme.black,
     fontSize: 1.8 * vh,
     fontFamily: Fonts.SFR,
   },

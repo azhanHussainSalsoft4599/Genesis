@@ -56,7 +56,11 @@ const OrderItemsContainer = props => {
             {/* <TextWrapper style={styles.categoryGenderTextStyle}>
               Women
             </TextWrapper> */}
-
+            <View style={styles.productAmountView}>
+              <TextWrapper style={styles.amountTextStyle}>
+                ${Number(props?.data?.product_price).toFixed(2)}
+              </TextWrapper>
+            </View>
             <View style={styles.amountValueView}>
               <TouchableOpacity
                 onPress={decrementValue}
@@ -78,12 +82,6 @@ const OrderItemsContainer = props => {
           </View>
 
           <View style={styles.amountTextView}>
-            <View style={styles.productAmountView}>
-              <TextWrapper style={styles.amountTextStyle}>
-                ${Number(props?.data?.product_price).toFixed(2)}
-              </TextWrapper>
-            </View>
-
             <TouchableOpacity
               onPress={props?.onPress}
               style={styles.deleteButtonView}>
@@ -116,7 +114,6 @@ const styles = StyleSheet.create({
   },
   productAmountView: {
     width: vw * 20,
-    alignItems: 'center',
   },
   searchItemView: {
     width: vw * 40,
@@ -165,7 +162,7 @@ const styles = StyleSheet.create({
   },
 
   amountTextStyle: {
-    color: theme.primary,
+    color: theme.black,
     fontSize: 1.7 * vh,
     fontFamily: Fonts.OB,
     width: vw * 15,
@@ -196,7 +193,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightgray',
     width: 25 * vw,
     height: 4 * vh,
-    borderRadius: 6 * vw,
+    borderRadius: vh * 0.5,
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     marginTop: 1 * vh,

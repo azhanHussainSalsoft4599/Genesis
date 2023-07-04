@@ -12,49 +12,50 @@ const RemoveProductAlert = props => {
   const [removeCartItemState, removeFromCartFunc] = useDeleteFromCartHook();
   return (
     <Modal
-    transparent={true}
-    visible={props.visibility ? props.visibility : false}
-    style={{flex: 1}}>
-    <BlurView style={styles.blurViewStyle} blurType="dark" blurAmount={40} />
-    <View style={styles.alertMainView}>
-      <TouchableOpacity
-        style={styles.crossIconView}
-        onPress={props?.noButtonOnPress}>
-        {/* <Image source={icons.cross} style={styles.crossIconStyle} /> */}
-      </TouchableOpacity>
+      transparent={true}
+      visible={props.visibility ? props.visibility : false}
+      style={{flex: 1}}>
+      <BlurView style={styles.blurViewStyle} blurType="dark" blurAmount={40} />
+      <View style={styles.alertMainView}>
+        <TouchableOpacity
+          style={styles.crossIconView}
+          onPress={props?.noButtonOnPress}>
+          {/* <Image source={icons.cross} style={styles.crossIconStyle} /> */}
+        </TouchableOpacity>
 
-      <View style={styles.checkIconView}>
-        <Image source={icons.questionMark} style={styles.checkIconStyle} />
+        <View style={styles.checkIconView}>
+          <Image source={icons.questionMark} style={styles.checkIconStyle} />
 
-        <TextWrapper
-          numberOfLines={3}
-          style={styles.customAlertHeadingTextStyle}>
-          Are you sure you want to remove product from the cart?
-        </TextWrapper>
+          <TextWrapper
+            numberOfLines={3}
+            style={styles.customAlertHeadingTextStyle}>
+            Are you sure you want to remove product from the cart?
+          </TextWrapper>
 
-        <View style={styles.choiceButtonView}>
-          <SubmitButton
-            title="YES"
-            style={styles.yesButtonView}
-            textStyle={styles.yesTextStyle}
-            onPress={() => {
-              removeFromCartFunc(props?.deleteItem);
-              setTimeout(() => {
-                props?.noButtonOnPress();
-              }, 200);
-            }}
-          />
+          <View style={styles.choiceButtonView}>
+            <SubmitButton
+              title="YES"
+              style={styles.yesButtonView}
+              textStyle={styles.yesTextStyle}
+              onPress={() => {
+                removeFromCartFunc(props?.deleteItem);
+                setTimeout(() => {
+                  props?.noButtonOnPress();
+                }, 200);
+              }}
+            />
 
-          <SubmitButton
-            title="NO"
-            onPress={props?.noButtonOnPress}
-            style={styles.noButtonView}
-            textStyle={styles.noTextStyle}
-          />
+            <SubmitButton
+              title="NO"
+              onPress={props?.noButtonOnPress}
+              style={styles.noButtonView}
+              textStyle={styles.noTextStyle}
+              tranparent
+            />
+          </View>
         </View>
       </View>
-    </View>
-  </Modal>
+    </Modal>
   );
 };
 

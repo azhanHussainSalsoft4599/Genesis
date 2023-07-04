@@ -1,4 +1,4 @@
-const primary = '#1E1E1E'
+const primary = '#23CBD9';
 const theme = {
   whiteBackground: '#ffffff',
   defaultAuthDescriptionColor: '#707070',
@@ -14,6 +14,7 @@ const theme = {
   grayColor: '#666666',
   grayColor2: '#C9C9C9',
   lightGreen: '#CED8CA',
+  textColor: '#E4BE80',
 };
 
 export default theme;

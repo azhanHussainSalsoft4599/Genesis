@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
     height: 5 * vh,
     width: 5 * vw,
     tintColor: theme.whiteBackground,
-
   },
 
   searchIconButtonView: {
@@ -65,7 +64,6 @@ const styles = StyleSheet.create({
     fontSize: 2.8 * vh,
     color: theme.whiteBackground,
     marginRight: 20 * vw,
-   
   },
 
   productDetailsStyle: {
@@ -95,7 +93,7 @@ const styles = StyleSheet.create({
   },
 
   productPriceTextStyle: {
-    color: theme.primary,
+    color: theme.textColor,
     fontSize: 2.8 * vh,
     marginLeft: vw * 2,
     // textShadowColor: 'rgba(0, 0, 0, 1)',
@@ -160,7 +158,7 @@ const styles = StyleSheet.create({
   descriptionView: {
     color: theme.defaultInactiveBorderColor,
     fontSize: 1.6 * vh,
-    textAlign:'justify'
+    textAlign: 'justify',
   },
 
   addToCartButtonMainContainer: {
@@ -277,18 +275,18 @@ const styles = StyleSheet.create({
     width: 60 * vw,
     alignSelf: 'center',
     justifyContent: 'space-around',
-    marginTop:2*vh
+    marginTop: 2 * vh,
     // zIndex: -10,
   },
 
   detailsTabView: {
     width: 28 * vw,
-    paddingVertical:1*vh,
+    paddingVertical: 1 * vh,
     // height: 5 * vh,
     justifyContent: 'center',
     alignItems: 'center',
     borderColor: theme.defaultAuthDescriptionColor,
-    borderRadius: 0.5 * vw,
+    borderRadius: vw,
   },
 
   reviewsTabView: {
@@ -322,9 +320,9 @@ const styles = StyleSheet.create({
     // marginBottom: 4 * vh,
     width: 90 * vw,
     height: vh * 12,
-    justifyContent:'space-evenly',
+    justifyContent: 'space-evenly',
     paddingLeft: vw * 1.3,
-    marginTop: vh * 2 
+    marginTop: vh * 2,
   },
 
   cartButtonView: {
@@ -371,7 +369,7 @@ const styles = StyleSheet.create({
     height: 7 * vh,
     borderTopRightRadius: 8 * vw,
     borderTopLeftRadius: 8 * vw,
-    borderRadius:0,
+    borderRadius: 0,
     backgroundColor: theme.primary,
   },
 

@@ -1,8 +1,8 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
-import { vh, vw } from '../../../units/index';
+import {vh, vw} from '../../../units/index';
 
-import { Fonts } from '../../../assets/fonts/index';
+import {Fonts} from '../../../assets/fonts/index';
 import theme from '../../../utils/theme';
 
 export default StyleSheet.create({
@@ -10,8 +10,8 @@ export default StyleSheet.create({
     height: 100 * vh,
     width: 100 * vw,
     position: 'absolute',
-    backgroundColor: theme.primary,
-    opacity: 0.7,
+    backgroundColor: '#000A',
+    opacity: 0.9,
   },
 
   crossIconStyle: {
@@ -54,7 +54,7 @@ export default StyleSheet.create({
     fontSize: 2.5 * vh,
     textAlign: 'center',
     marginBottom: 2 * vh,
-    width: 80 * vw
+    width: 80 * vw,
   },
 
   customAlertDescriptionTextStyle: {
@@ -77,7 +77,7 @@ export default StyleSheet.create({
     marginTop: 2 * vh,
     backgroundColor: theme.whiteBackground,
     borderColor: theme.primary,
-    borderWidth: 0.5 * vw
+    borderWidth: 0.5 * vw,
   },
 
   noButtonView: {
@@ -85,6 +85,7 @@ export default StyleSheet.create({
     height: 7 * vh,
     marginTop: 2 * vh,
     backgroundColor: theme.primary,
+    borderWidth: 1,
   },
 
   textStyle: {
@@ -92,15 +93,19 @@ export default StyleSheet.create({
   },
 
   yesTextStyle: {
-    fontSize: 2.2 * vh,
+    fontSize: 2 * vh,
     fontFamily: Fonts.SFR,
-    color: theme.primary
+    color: theme.whiteBackground,
   },
-
+  noTextStyle: {
+    fontSize: 2 * vh,
+    fontFamily: Fonts.SFR,
+    color: theme.black,
+  },
   choiceButtonView: {
     flexDirection: 'row',
     width: 80 * vw,
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
   },
 
   barViewStyle: {

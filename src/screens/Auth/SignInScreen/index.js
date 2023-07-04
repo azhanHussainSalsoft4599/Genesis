@@ -1,5 +1,5 @@
 import React, {useState, useCallback} from 'react';
-import {View, Image, TouchableOpacity} from 'react-native';
+import {View, Image, TouchableOpacity, ScrollView} from 'react-native';
 import {authIcons, generalImages, icons} from '../../../assets/images/index';
 import MainContainer from '../../../components/Containers/MainContainer';
 import ScrollWrapper from '../../../components/Containers/ScrollWrapper'; //might need it
@@ -15,7 +15,7 @@ import {useFocusEffect} from '@react-navigation/core';
 import theme from '../../../utils/theme';
 import LinearGradient from 'react-native-linear-gradient';
 import {useRef} from 'react';
-import { vh, vw } from '../../../units';
+import {vh, vw} from '../../../units';
 
 const SignInScreen = props => {
   const passRef = useRef();
@@ -34,7 +34,7 @@ const SignInScreen = props => {
   const renderLogo = () => {
     return (
       <View style={styles.logoView}>
-        <Image source={generalImages.logo} style={styles.logoStyle} />
+        <Image source={authIcons.logo} style={styles.logoStyle} />
       </View>
     );
   };
@@ -130,12 +130,13 @@ const SignInScreen = props => {
           </View>
 
           {renderCheckWithForgotPassword()}
-          <SubmitButton
-            onPress={handleLogin}
-            style={styles.submitButtonStyle}
-            titleTextStyle={styles.titleTextStyle}
-            title="Log Into Your Account"
-          />
+          <View style={styles.btnContainer}>
+            <SubmitButton
+              onPress={handleLogin}
+              titleTextStyle={styles.titleTextStyle}
+              title="Sign In"
+            />
+          </View>
         </View>
         <View
           style={{
@@ -187,17 +188,18 @@ const SignInScreen = props => {
   };
 
   return (
-    <LinearGradient
-      start={{x: 0.5, y: 0.5}}
-      end={{x: 1, y: 0}}
-      colors={['#FFFFFF', '#FFFFFF', '#FFFFFF']}
-      // colors={['#D6D6D6', '#FFFFFF', '#D6D6D6']}
-      style={{flex: 1}}>
-      <ScrollWrapper avoidKeyboard={true}>
+    <ScrollView style={{backgroundColor: theme.black, flex: 1}}>
+      <ScrollWrapper
+        avoidKeyboard={true}
+        style={{
+          backgroundColor: theme.black,
+          borderTopRightRadius: vh * 2,
+          borderTopLeftRadius: vh * 2,
+        }}>
         {renderLogo()}
         {renderLoginFields()}
       </ScrollWrapper>
-    </LinearGradient>
+    </ScrollView>
   );
 };
 export default SignInScreen;

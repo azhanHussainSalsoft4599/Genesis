@@ -148,7 +148,7 @@ const ForgotPasswordScreen = props => {
   const renderLogo = () => {
     return (
       <View style={styles.logoView}>
-        <Image source={generalImages.logo} style={styles.logoStyle} />
+        <Image source={authIcons.logo} style={styles.logoStyle} />
       </View>
     );
   };
@@ -172,9 +172,13 @@ const ForgotPasswordScreen = props => {
       return (
         <View style={styles.fieldsView}>
           <TextWrapper
-            style={{fontSize: vw * 4, color: theme.black, fontFamily: Fonts.KB}}
+            style={{
+              fontSize: vw * 4,
+              color: theme.grayColor,
+              fontFamily: Fonts.KB,
+            }}
             numberOfLines={2}>
-            Enter your email address to receive a verification code.
+            Enter Your Registered Email To Recover Password.
           </TextWrapper>
           <AuthTextInput
             value={email}
@@ -190,9 +194,13 @@ const ForgotPasswordScreen = props => {
       return (
         <View style={styles.fieldsView}>
           <TextWrapper
-            style={{fontSize: vw * 4, color: theme.black, fontFamily: Fonts.KB}}
+            style={{
+              fontSize: vw * 4,
+              color: theme.grayColor,
+              fontFamily: Fonts.KB,
+            }}
             numberOfLines={2}>
-            Enter Verification Code sent to your email address.
+            Enter Your Verification Code Sent To Your Email.
           </TextWrapper>
           <AuthTextInput
             value={verificationCode}
@@ -225,9 +233,13 @@ const ForgotPasswordScreen = props => {
       return (
         <View style={styles.fieldsView}>
           <TextWrapper
-            style={{fontSize: vw * 4, color: theme.black, fontFamily: Fonts.KB}}
+            style={{
+              fontSize: vw * 4,
+              color: theme.grayColor,
+              fontFamily: Fonts.KB,
+            }}
             numberOfLines={2}>
-            Set a New password for your account.
+            Enter Your New Password To Reset Password.
           </TextWrapper>
           <AuthTextInput
             value={password}

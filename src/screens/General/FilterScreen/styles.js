@@ -6,6 +6,7 @@ import theme from '../../../utils/theme';
 const styles = StyleSheet.create({
   scroll: {
     flex: 1,
+    backgroundColor: theme.whiteBackground,
   },
   content: {
     alignItems: 'center',
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
   mainTextStyle: {
     fontFamily: Fonts.MSW,
     fontSize: 2 * vh,
-    color: theme.black
+    color: theme.black,
   },
 
   bellowTextStyle: {
