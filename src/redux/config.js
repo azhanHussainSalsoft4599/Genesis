@@ -1,13 +1,14 @@
 export const urls = {
-  v1: `https://pureorganicsrx.co/wp-json/wc/v3/`,
-  customUrl: 'https://pureorganicsrx.co/wp-json/api/',
-  bannerUrl: 'https://pureorganicsrx.co/wp-json/api/',
+  v1: `https://loziermotorsllc.com/wp-json/wc/v3/`,
+  customUrl: 'https://loziermotorsllc.com/wp-json/api/',
+  bannerUrl: 'https://loziermotorsllc.com/wp-json/api/',
 };
 // Client Key: ck_6d923b3757e5c6a337d6f177f30219c74dae577f
 // Client Secret: cs_4001c4fbd32050f8faccea034f0305b5e25acf3f
 
-export const consumer_key = 'ck_6d923b3757e5c6a337d6f177f30219c74dae577f';
-export const consumer_secret = 'cs_4001c4fbd32050f8faccea034f0305b5e25acf3f';
+export const consumer_secret = 'cs_8f016617318c0c9f4b3eb6fc45b18efdfa1645cb';
+export const consumer_key = 'ck_9b48f9b39a45802eb9bcf95a52545b6dfe4bfdf9';
+
 
 // https://armarioperfecto.uk//wp-json/wc/v3/orders/?consumer_key=ck_e4f41079f801ca7b905b763829c38695aedf59b8&consumer_secret=cs_d7c276c98fc0c58f33966d2a1b131b2213b9ab04
 

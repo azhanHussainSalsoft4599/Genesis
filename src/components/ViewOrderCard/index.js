@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 import theme from '../../utils/theme';
 
 import TextWrapper from '../TextWrapper';
@@ -27,14 +27,10 @@ const ViewOrderCard = props => {
   return (
     <View
       key={props?.index}
-      style={[
-        styles.mainScreenView,
-        { backgroundColor: theme.primary },
-      ]}>
+      style={[styles.mainScreenView, {backgroundColor: theme.whiteBackground}]}>
       <View style={styles.cardView}>
-        <View >
-          <TextWrapper
-            style={[styles.subjectTextStyle, { color: theme.whiteBackground }]}>
+        <View>
+          <TextWrapper style={[styles.subjectTextStyle, {color: theme.black}]}>
             Order Number
           </TextWrapper>
           <TextWrapper style={styles.valueTextStyle}>
@@ -42,10 +38,7 @@ const ViewOrderCard = props => {
           </TextWrapper>
 
           <TextWrapper
-            style={[
-              styles.subjectWithSpaceTextStyle,
-              { color: theme.whiteBackground },
-            ]}>
+            style={[styles.subjectWithSpaceTextStyle, {color: theme.black }]}>
             Status
           </TextWrapper>
           <TextWrapper style={styles.valueTextStyle}>
@@ -53,22 +46,17 @@ const ViewOrderCard = props => {
           </TextWrapper>
 
           <TextWrapper
-            style={[
-              styles.subjectWithSpaceTextStyle,
-              { color: theme.whiteBackground },
-            ]}>
+            style={[styles.subjectWithSpaceTextStyle, {color: theme.black }]}>
             Total Price
           </TextWrapper>
           <TextWrapper style={styles.valueTextStyle}>
             {/* {props?.data?.currency} {Math.floor(props?.data?.total).toFixed(2)}{' '} */}
-            {props?.data?.total}{' '}
-            For {props?.data?.line_items.length} Items
+            {props?.data?.total} For {props?.data?.line_items.length} Items
           </TextWrapper>
         </View>
 
         <View>
-          <TextWrapper
-            style={[styles.subjectTextStyle, { color: theme.whiteBackground }]}>
+          <TextWrapper style={[styles.subjectTextStyle, {color: theme.black }]}>
             Order Date
           </TextWrapper>
           <TextWrapper style={styles.valueTextStyle}>

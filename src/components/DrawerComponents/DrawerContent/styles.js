@@ -6,7 +6,7 @@ import theme from '../../../utils/theme';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.primary,
+    backgroundColor: theme.black,
     // borderBottomRightRadius: 14 * vw,
     // borderTopEndRadius: 14 * vh,
     // borderBottomRightRadius: 10 * vw,
@@ -50,8 +50,7 @@ const styles = StyleSheet.create({
   logoImage: {
     height: vh * 18,
     width: vw * 50,
-    resizeMode:'contain',
-    tintColor:'white'
+    resizeMode: 'contain',
   },
   header: {
     marginLeft: 5 * vw,
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 3 * vh,
-    marginTop:10*vh
+    marginTop: 10 * vh,
   },
   blurViewStyle: {
     height: 100 * vh,

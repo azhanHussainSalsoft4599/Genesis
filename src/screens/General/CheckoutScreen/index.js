@@ -57,7 +57,6 @@ const CheckoutScreen = props => {
   ];
   const user_ID = useSelector(state => state.authReducer?.user);
 
-  console.log('USer ID from CheckOut =========>', user_ID);
   const [checked, setChecked] = useState(true);
   const [customerDetails, setCustomerDetails] = useState();
   const [step, setStep] = useState(1);
@@ -66,7 +65,6 @@ const CheckoutScreen = props => {
   const cartItems = useSelector(state => state.cartReducer?.cartItems);
   const [radioVal, setRadioVal] = useState('cod');
 
-  console.log('Cartitems ======>', cartItems);
   const [checkoutState, checkoutFunc] = useCheckoutHook();
   useFocusEffect(
     useCallback(() => {
@@ -370,7 +368,7 @@ const CheckoutScreen = props => {
       return (
         <View>
           <CheckoutInput
-            title="Street 1"
+            title="Street 1*"
             placeholdText="Enter Street Address"
             value={streetAddress1}
             placeholderTextColor={theme.defaultInactiveBorderColor}
@@ -386,7 +384,7 @@ const CheckoutScreen = props => {
             textInputRow={{bottom: vh * 1}}
           />
           <CheckoutInput
-            title="City"
+            title="City*"
             placeholdText="Enter City"
             keyboardType=""
             value={city}
@@ -396,7 +394,7 @@ const CheckoutScreen = props => {
           />
           <View style={styles.stateCountryView}>
             <CheckoutInput
-              title="State"
+              title="State*"
               placeholdText="Enter State"
               customTextInputView={styles.customTextInputView}
               customTextInputStyle={styles.customTextInputStyle}
@@ -407,7 +405,7 @@ const CheckoutScreen = props => {
               textInputRow={{bottom: vh * 1}}
             />
             <CheckoutInput
-              title="Country"
+              title="Country*"
               placeholdText="Enter Country"
               customTextInputView={styles.customTextInputView}
               customTextInputStyle={styles.customTextInputStyle}
@@ -484,6 +482,7 @@ const CheckoutScreen = props => {
                 textStyle={styles.textStykeBackButton}
                 style={styles.backButtonStyle}
                 title="BACK"
+                tranparent
               />
               <SubmitButton
                 onPress={goNext}
@@ -534,6 +533,7 @@ const CheckoutScreen = props => {
                 textStyle={styles.textStykeBackButton}
                 style={styles.backButtonStyle}
                 title="BACK"
+                tranparent
               />
             )}
             {step == 3 ? (

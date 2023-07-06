@@ -28,20 +28,20 @@ export default StyleSheet.create({
     height: 7 * vh,
     marginTop: 2 * vh,
     backgroundColor: theme.whiteBackground,
-    borderColor: theme.primary,
+    borderColor: theme.whiteBackground,
     borderWidth: 0.5 * vw,
   },
   yesTextStyle: {
     fontSize: 2.2 * vh,
     fontFamily: Fonts.SFR,
-    color: theme.primary,
+    color: theme.whiteBackground,
   },
 
   noButtonView: {
     width: 35 * vw,
     height: 7 * vh,
     marginTop: 2 * vh,
-    backgroundColor: theme.primary,
+    borderWidth: 1,
   },
   tickView: {
     backgroundColor: theme.grayText2,
@@ -78,8 +78,8 @@ export default StyleSheet.create({
 
   checkIconStyle: {
     resizeMode: 'contain',
-    height: 6 * vh,
-    width: 6 * vw,
+    height: 4 * vh,
+    width: 4 * vw,
   },
 
   customAlertHeadingTextStyle: {
@@ -119,5 +119,7 @@ export default StyleSheet.create({
     borderRadius: 2 * vw,
   },
 
-  noTextStyle: {},
+  noTextStyle: {
+    color: theme.black,
+  },
 });

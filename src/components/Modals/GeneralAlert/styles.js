@@ -10,7 +10,7 @@ export default StyleSheet.create({
     height: 100 * vh,
     width: 100 * vw,
     position: 'absolute',
-    backgroundColor: theme.primary,
+    backgroundColor: theme.black,
     opacity: 0.7,
   },
 
@@ -21,7 +21,7 @@ export default StyleSheet.create({
   },
 
   tickView: {
-    backgroundColor: theme.lightGreen,
+    backgroundColor: '#E4DDD7',
     width: vh * 8,
     height: vh * 8,
     borderRadius: vh * 5,
@@ -57,6 +57,7 @@ export default StyleSheet.create({
     resizeMode: 'contain',
     height: 6 * vh,
     width: 6 * vw,
+    tintColor: theme.primary,
   },
 
   customAlertHeadingTextStyle: {
@@ -69,7 +70,7 @@ export default StyleSheet.create({
   customAlertDescriptionTextStyle: {
     color: '#666666',
     fontFamily: Fonts.SFR,
-    fontSize: 2 * vh,
+    fontSize: 1.8 * vh,
     color: theme.defaultAuthDescriptionColor,
   },
 

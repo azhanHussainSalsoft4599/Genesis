@@ -7,7 +7,12 @@ import {
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
 import TextWrapper from '../../TextWrapper';
-import {generalImages, icons, sideIcons} from '../../../assets/images';
+import {
+  authIcons,
+  generalImages,
+  icons,
+  sideIcons,
+} from '../../../assets/images';
 import {useSelector} from 'react-redux';
 import theme from '../../../utils/theme';
 import {vh} from '../../../units';
@@ -154,7 +159,7 @@ const DrawerContent = props => {
           </TouchableOpacity>
 
           <View style={styles.header}>
-            <Image source={generalImages.DrawerLogo} style={styles.logoImage} />
+            <Image source={authIcons.logo} style={styles.logoImage} />
           </View>
         </View>
         <View style={styles.routeContainer}>

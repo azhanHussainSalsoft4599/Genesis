@@ -5,32 +5,33 @@ import {vh, vw} from '../../units';
 const styles = StyleSheet.create({
   container: {
     marginBottom: vh * 4,
-    height:  vh * 8,
-    justifyContent:'center',
-    
+    height: vh * 8,
+    justifyContent: 'center',
+
     alignItems: 'center',
-width: vw * 30,
-    backgroundColor:theme.primary,
-    borderRadius: vw * 6
+    width: vw * 30,
+    backgroundColor: theme.primary,
+    borderRadius: vw * 2,
+    borderWidth: 1,
   },
   activeContainer: {
     marginBottom: vh * 4,
-    height:  vh * 8,
-    justifyContent:'center',
-    
+    height: vh * 8,
+    justifyContent: 'center',
+
     alignItems: 'center',
-width: vw * 30,
-    backgroundColor:theme.whiteBackground,
-    borderRadius: vw * 6,
+    width: vw * 30,
+    backgroundColor: theme.whiteBackground,
+    borderRadius: vw * 2,
     borderColor: '#BEBEBE',
-    borderWidth: 1
+    borderWidth: 1,
   },
   subContainer: {
     flex: 1,
-    justifyContent:'center',
+    justifyContent: 'center',
     alignItems: 'center',
     width: vw * 30,
-    borderRadius: vw * 2
+    borderRadius: vw * 2,
   },
   activeRadioText: {
     // marginLeft: vw * 3,

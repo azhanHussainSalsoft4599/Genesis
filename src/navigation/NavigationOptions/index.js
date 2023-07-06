@@ -3,7 +3,7 @@ import {Image, View} from 'react-native';
 import IconButton from '../../components/Buttons/IconButton';
 import styles from './styles';
 import RubikRegular from '../../components/TextWrapper';
-import {generalImages, icons} from '../../assets/images';
+import {authIcons, generalImages, icons} from '../../assets/images';
 import {vh, vw} from '../../units';
 import theme from '../../utils/theme';
 
@@ -63,6 +63,7 @@ const leftBtnRoutes = {
   ViewOrderScreen: 'Orders',
   AboutScreen: 'About Us',
   WishlistScreen: 'Wishlist',
+  
 };
 
 const blackBackgroundsRoutes = {
@@ -73,6 +74,7 @@ const blackBackgroundsRoutes = {
   OrderDetailsScreen: 'Order Details',
   CheckoutScreen: 'Checkout',
   AboutScreen: 'About Us',
+  WishlistScreen: 'Wishlist',
 };
 const getTitle = props => {
   if (
@@ -90,7 +92,7 @@ const getTitle = props => {
           backgroundColor: theme.black,
         }}>
         <Image
-          source={generalImages.logo}
+          source={authIcons.logo}
           style={{height: vh * 20, width: vw * 35, resizeMode: 'contain'}}
         />
       </View>

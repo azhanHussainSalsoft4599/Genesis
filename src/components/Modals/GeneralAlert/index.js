@@ -38,10 +38,10 @@ const GeneralAlert = props => {
           </TextWrapper>
 
           <SubmitButton
-            title="Login Again"
+            title="Login"
             style={styles.submitButtonView}
             textStyle={styles.textStyle}
-            onPress={() => navigation.navigate('SignupScreen')}
+            onPress={() => navigation.navigate('SignInScreen')}
           />
         </View>
       </View>

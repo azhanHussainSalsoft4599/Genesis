@@ -1,12 +1,12 @@
-import { StyleSheet } from 'react-native';
-import { Fonts } from '../../../assets/fonts';
-import { vh, vw } from '../../../units/index';
+import {StyleSheet} from 'react-native';
+import {Fonts} from '../../../assets/fonts';
+import {vh, vw} from '../../../units/index';
 import theme from '../../../utils/theme';
 
 const styles = StyleSheet.create({
   scroll: {
     flex: 1,
-    backgroundColor: theme.primary
+    backgroundColor: theme.black,
   },
   content: {
     alignItems: 'center',
@@ -40,14 +40,13 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontFamily: Fonts.MSW,
     fontSize: 2.8 * vh,
-    color: theme.whiteBackground
+    color: theme.whiteBackground,
   },
 
   orderImageStyle: {
     resizeMode: 'contain',
     height: 40 * vh,
-    width: 70 * vw
-
+    width: 70 * vw,
   },
 
   mainView: {
@@ -56,25 +55,24 @@ const styles = StyleSheet.create({
     height: 100 * vh,
     marginTop: 4 * vh,
     // borderTopRightRadius: 15 * vw
-
   },
 
   imageView: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 6 * vh
+    marginTop: 6 * vh,
   },
 
   descriptionView: {
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 
   orderAcceptedTextStyle: {
     fontFamily: Fonts.MSW,
     fontSize: 2.8 * vh,
     marginBottom: 2 * vh,
-    marginTop: 2 * vh
+    marginTop: 2 * vh,
   },
 
   orderNumberTextStyle: {
@@ -82,14 +80,11 @@ const styles = StyleSheet.create({
     color: theme.borderBottomDefaultColor,
     width: 50 * vw,
     textAlign: 'center',
-    marginBottom: 4 * vh
+    marginBottom: 4 * vh,
   },
 
   titleView: {
-    width: 40 * vw
-  }
-
-
-
+    width: 40 * vw,
+  },
 });
 export default styles;

@@ -47,7 +47,7 @@ const LogoutAlert = props => {
               }}></View>
           </View>
           <View style={styles.tickView}>
-            <Image source={icons.questionMark} style={styles.checkIconStyle} />
+            <Image source={icons.quest} style={styles.checkIconStyle} />
           </View>
           <TextWrapper
             numberOfLines={2}
@@ -61,16 +61,17 @@ const LogoutAlert = props => {
 
           <View style={styles.choiceButtonView}>
             <SubmitButton
-              style={styles.noButtonView}
-              textStyle={styles.noTextStyle}
+              style={styles.yesButtonView}
+              textStyle={styles.yesTextStyle}
               title={'Yes'}
               onPress={() => logout()}
             />
             <SubmitButton
-              style={styles.yesButtonView}
-              textStyle={styles.yesTextStyle}
+              style={styles.noButtonView}
+              textStyle={styles.noTextStyle}
               title={'No'}
               onPress={props?.onHide}
+              tranparent
             />
           </View>
         </View>

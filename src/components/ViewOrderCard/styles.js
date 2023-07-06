@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     marginTop: 2 * vh,
   },
 
-  valueTextStyle: {fontSize: 1.8 * vh, color: theme.lightGreen},
+  valueTextStyle: {fontSize: 1.8 * vh, color: theme.black},
 
   buttonView: {
     justifyContent: 'center',

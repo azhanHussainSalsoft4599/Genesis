@@ -139,7 +139,6 @@ const styles = StyleSheet.create({
   backButtonStyle: {
     width: 40 * vw,
     backgroundColor: 'transparent',
-    borderColor: theme.primary,
     borderWidth: 1,
   },
 
@@ -148,7 +147,7 @@ const styles = StyleSheet.create({
   },
 
   textStykeBackButton: {
-    color: theme.primary,
+    color: theme.black,
   },
 
   summaryTextStyle: {
